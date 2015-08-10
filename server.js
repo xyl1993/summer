@@ -2,11 +2,13 @@
 var express = require('express');
 var fs      = require('fs');
 var app     = express();
+var path    = require('path');
 var eps     = require('ejs');
 
 app.engine('html', require('ejs').renderFile);
 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
