@@ -1,0 +1,55 @@
+body{
+	background: url(../images/bac.png) left top no-repeat; background-size: 100% 100%;font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+
+.my-navbar{font-family: Brush Script Std;color: rgba(0,0,0,.8);font-size: 27px;font-weight: bold;}
+
+@media(min-width: 768px){
+	.navbar-default .my-nav>.active>a{background-color: #f8f8f8;}
+	.my-nav>.active>a:after {
+	content: "";
+    background-color: red;
+    height: 6px;
+    width: 6px;
+    right: 7px;
+    top: 18px;
+    position: absolute;
+    border-radius: 50% 50%;
+    display: block;}
+}
+.in-main-dyn{}
+
+.header{
+	min-height: 400px;position: relative;background: url(../images/page1.png) center center no-repeat;    margin-top: 57px;margin-right: 135px;margin-left: 135px;
+}
+
+.clear{content: "";clear: both;}
+
+.annotation{margin-top:15px;margin-bottom: 15px;margin-left: 135px;margin-right: 135px; position: relative;height: 30px;}
+
+.annotation span{    float: right;padding-right: 50px;color: rgba(0,0,0,.5);line-height: 30px;}
+
+.main-img-dyn{padding-left: 0;margin-left:135px;margin-right: 135px;}
+
+.main-img-dyn li{list-style: none;float: left;width: 25%;position: relative;}
+.main-img-dyn li img{width: 100%;}
+.main-img-dyn li:hover{cursor: pointer;}
+.img-hover{ background-size: 100%; height: 100%;width: 100%;position: absolute;display: none;}
+.meself-hover{background: url(../images/bag1.png) center center no-repeat;}
+.experience-hover{background: url(../images/bag3.png) center center no-repeat;}
+.meself:hover .meself-hover{display: block;}
+.experience:hover .experience-hover{display: block;}
+
+.bottom{height: 50px;content: ""}
+
+.nav-user{float: right;margin-bottom: 0px;margin-top: 3px;padding-right: 50px;}
+.nav-user div{float: left;}
+.nav-user div:first-of-type{    float: left;margin-top: 11px;margin-right: 15px;border: 1px solid #e3e3e3;border-radius: 25px 25px;background-color: #ccc;}
+.nav-user input{    border: none;background-color: #ccc;width: 130px;margin-left: 12px;height: 23px;}
+.nav-user .glyphicon{    top: 3px;right: 8px;color: #fff;}
+.nav-user img{width: 50px;height: 50px;}
+
+@media(max-width: 938px){
+	.nav-user{display: none;}
+	.header,.annotation,.main-img-dyn{margin-right: 30px;margin-left: 30px;}
+}
