@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="main">
 <head>
+  <meta name="description" content="小夏的个人主页（https://summer-xylblog.rhcloud.com/）" />
+  <meta name="keywords" content="夏夏|小夏|summer|个人主页" />
+  <meta name="author" content="小夏" />
+  <meta name="copyright" content="本页版权归小夏所有.All Rights Reserved" />
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Summer</title>
 
 	<!-- <link rel="shortcut icon" href="../../common/images/favicon.ico" /> -->
@@ -31,11 +35,11 @@
       <a class="navbar-brand my-navbar" href="#">Summer</a>
    </div>
    <div class="collapse navbar-collapse " id="example-navbar-collapse">
-      <ul class="nav navbar-nav my-nav">
-         <li class="active"><a href="#">HOME</a></li>
-         <li><a href="#">ABOUT ME</a></li>
-         <li><a href="#">EXPERIENCE</a></li>
-         <li><a href="#">PROFESSIONAL SKILLS</a></li>
+      <ul class="nav navbar-nav my-nav" ng-controller="indexCtl">
+         <li class="active" tab-change><a href="#/home">HOME</a></li>
+         <li tab-change><a href="#/about-me">ABOUT ME</a></li>
+         <li tab-change><a href="#">EXPERIENCE</a></li>
+         <li tab-change><a href="#">PROFESSIONAL SKILLS</a></li>
       </ul>
       <ul class="nav-user">
       	<div>
@@ -49,30 +53,9 @@
    </div>
   </nav>
   <div class="in-main-dyn">
-  	<div class="header"></div>
-  	<div class="annotation">
-  		<span>@Summer</span>
-  	</div>
-  	<ul class="main-img-dyn">
-  		<li class="meself">
-  		  <div class="img-hover meself-hover">
-  				
-  		  </div>
-  		  <img src="/images/tag1.png">
-  		</li>
-  		<li>
-  		  <img src="/images/tag2.png">
-  		</li>
-  		<li class="experience">
-  		  <div class="img-hover experience-hover"></div>
-  		  <img src="/images/tag3.png">
-  		</li>
-  		<li>
-  		  <img src="/images/tag4.png">
-  		</li>
-  	</ul>
-  	<div class="clear"></div>
-  	<div class="bottom"></div>
+    <div class="in-main" ui-view>
+      
+    </div>
   </div>
 	<!-- jquery -->
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
@@ -84,7 +67,7 @@
     <script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="/js/angular-resource.min.js"></script>
 	<!-- me js -->
-	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/my-javascript/index.js"></script>
 </body>
 
 </html>

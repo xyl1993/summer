@@ -1,11 +1,13 @@
 body{
-	background: url(../images/bac.png) left top no-repeat; background-size: 100% 100%;font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+	background: url(../images/bac.png) left top no-repeat;font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
 }
 
 .my-navbar{font-family: Brush Script Std;color: rgba(0,0,0,.8);font-size: 27px;font-weight: bold;}
 
 @media(min-width: 768px){
 	.navbar-default .my-nav>.active>a{background-color: #f8f8f8;}
+    .navbar-default .my-nav>.active>a:hover {background-color: #f8f8f8;}
+    .navbar-default .my-nav>.active>a:focus {background-color: #f8f8f8;}
 	.my-nav>.active>a:after {
 	content: "";
     background-color: red;
@@ -17,19 +19,19 @@ body{
     border-radius: 50% 50%;
     display: block;}
 }
-.in-main-dyn{}
+.in-main{margin-top: 57px;margin-right: 135px;margin-left: 135px;}
 
 .header{
-	min-height: 400px;position: relative;background: url(../images/page1.png) center center no-repeat;    margin-top: 57px;margin-right: 135px;margin-left: 135px;
+	min-height: 400px;position: relative;background: url(../images/page1.png) center center no-repeat;
 }
 
 .clear{content: "";clear: both;}
 
-.annotation{margin-top:15px;margin-bottom: 15px;margin-left: 135px;margin-right: 135px; position: relative;height: 30px;}
+.annotation{margin-top:15px;margin-bottom: 15px;position: relative;height: 30px;}
 
 .annotation span{    float: right;padding-right: 50px;color: rgba(0,0,0,.5);line-height: 30px;}
 
-.main-img-dyn{padding-left: 0;margin-left:135px;margin-right: 135px;}
+.main-img-dyn{padding-left: 0;}
 
 .main-img-dyn li{list-style: none;float: left;width: 25%;position: relative;}
 .main-img-dyn li img{width: 100%;}
@@ -51,5 +53,5 @@ body{
 
 @media(max-width: 938px){
 	.nav-user{display: none;}
-	.header,.annotation,.main-img-dyn{margin-right: 30px;margin-left: 30px;}
+	.in-main{margin-right: 30px;margin-left: 30px;}
 }

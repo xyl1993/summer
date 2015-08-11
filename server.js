@@ -4,11 +4,18 @@ var fs      = require('fs');
 var app     = express();
 var path    = require('path');
 var eps     = require('ejs');
-
+var routes = require('./routes/index');
 app.engine('html', require('ejs').renderFile);
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
+
+app.use('/', routes);
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
@@ -54,28 +61,6 @@ var initDb = function(callback) {
   });
 };
 
-app.get('/', function (req, res) {
-  if (db) {
-    var col = db.collection('counts');
-    // Create a document with request IP and current time of request
-    col.insert({ip: req.ip, date: Date.now()});
-    col.count(function(err, count){
-      res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
-    });
-  } else {
-    res.render('index.html', { pageCountMessage : null});
-  }
-});
-
-app.get('/pagecount', function (req, res) {
-  if (db) {
-    db.collection('counts').count(function(err, count ){
-      res.send('{ pageCount: ' + count +'}');
-    });
-  } else { 
-    res.send('{ pageCount: -1 }');
-  }
-});
 
 // error handling
 app.use(function(err, req, res, next){
