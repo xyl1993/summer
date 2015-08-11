@@ -6,7 +6,17 @@ var mainModule = angular.module('main', ['ui.router',
 mainModule.run(function($rootScope, $state, $http, $stateParams, $location,$timeout,$window) {
 	$rootScope.$state = $state;
 	$rootScope.$stateParams = $stateParams;
-});
+	$rootScope.$on('$stateChangeSuccess', 
+		function(event, toState, toParams, fromState){
+          var toStateUrl = toState.url;
+          $('.t-select').removeClass('active');
+          if(toStateUrl ==='/about-me'){
+          	$('#about').addClass('active')
+          }else if(toStateUrl ==='/home'){
+          	$('#home').addClass('active')
+          }
+		});
+	});
 
 ///路由配置
 mainModule.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider) {
@@ -22,7 +32,7 @@ mainModule.config(['$stateProvider','$urlRouterProvider',function($stateProvider
 
 //主目录控制器
 mainModule.controller('indexCtl', ['$scope', function($scope){
-	
+	//默认选中主页
 }])
 
 //主目录切换的指令
@@ -30,9 +40,13 @@ mainModule.directive('tabChange', function(){
 	// Runs during compile
 	return {
 		link: function($scope, iElm, iAttrs) {
-			// $("#" + scope.labId + "").addClass('selected');
-			console.log('ss');
+			if(sessionStorage.selLastId){
+				$("#" + sessionStorage.selLastId + "").addClass('active');
+			}else{
+				$("#home").addClass('active');
+			}
 			$(iElm).click(function() {
+				sessionStorage.selLastId = iElm[0].id;
 				$(iElm).addClass('active').siblings()
 						.removeClass('active');
 			});
