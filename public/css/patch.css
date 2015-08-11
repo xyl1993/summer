@@ -1,5 +1,5 @@
 body{
-	background: url(../images/bac.png) left top no-repeat;font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+	background: url(../images/bac.jpg) left top no-repeat;font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
 }
 
 .my-navbar{font-family: Brush Script Std;color: rgba(0,0,0,.8);font-size: 27px;font-weight: bold;}
@@ -23,7 +23,7 @@ body{
 .in-main{margin-top: 57px;}
 
 .header{
-	min-height: 400px;position: relative;background: url(../images/page1.png) center center no-repeat;transition-duration:1s; 
+	min-height: 400px;position: relative;background: url(../images/page1.jpg) center center no-repeat;transition-duration:1s; 
 }
 @media(max-width: 492px){
   .header{min-height: 200px;}
@@ -46,8 +46,8 @@ li#about:hover .header{background-image:url("../images/page2.png");}
 .img-hover{ background-size: 100%; height: 100%;width: 100%;position: absolute;display: none;}
 .meself-hover{background: url(../images/bag1.png) center center no-repeat;}
 .experience-hover{background: url(../images/bag3.png) center center no-repeat;}
-.meself:hover .meself-hover{display: block;}
-.experience:hover .experience-hover{display: block;}
+/*.meself:hover .meself-hover{display: block;}
+.experience:hover .experience-hover{display: block;}*/
 
 .bottom{height: 50px;content: ""}
 
