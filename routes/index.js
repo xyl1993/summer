@@ -17,6 +17,9 @@ router.get('/about-me', function(req, res, next) {
 	res.render('about-me.html')
 });
 
+router.get('/experience', function(req, res, next) {
+  res.render('experience.html')
+});
 
 // router.get('/', function (req, res) {
 //   if (db) {

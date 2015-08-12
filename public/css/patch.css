@@ -131,3 +131,16 @@ li#about:hover .header{background-image:url("../images/page2.png");}
     .description{display: block;}
     .description-value,.description-value-one{padding-left: 30px;}
 }
+
+/* experience css */
+.exp-left-dyn{    width: 172px;height: 364px;background: url("../images/expbg.png") center top no-repeat;float: left;margin-right: -172px;padding-top: 32px;text-align: center;}
+.exp-left-tit{    font-family: Brush Script Std;color: #fff;font-size: 40px;display: block;}
+.exp-menu-dyn{margin-top: 37px;}
+.exp-menu-dyn div{margin-bottom: 5px;}
+.exp-menu-dyn a{height: 20px;color: #fff;padding: 2px 8px;font-size: 13px;}
+.exp-menu-dyn a:hover {text-decoration: none;cursor: pointer;}
+.exp-menu-dyn a.active{background-color: #3C3C3C;}
+
+.exp-content-dyn{float: left;padding-left: 225px;width: 100%;padding-top: 56px;}
+.exp-main-box{    padding-top: 21px;padding-left: 30px;width: 100%;height: 500px;background-color: #6D6D6D;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
+.add-icon{width: 28px;height: 28px;font-size: 28px;text-align: center;line-height: 24px;border: 2px solid;color: #56CCC9;display: block;border-radius: 100% 100%;}

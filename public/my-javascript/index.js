@@ -6,6 +6,7 @@ var mainModule = angular.module('main', ['ui.router',
 mainModule.run(function($rootScope, $state, $http, $stateParams, $location,$timeout,$window) {
 	$rootScope.$state = $state;
 	$rootScope.$stateParams = $stateParams;
+	// 路由调整完成后根据state添加标志
 	$rootScope.$on('$stateChangeSuccess', 
 		function(event, toState, toParams, fromState){
           var toStateUrl = toState.url;
@@ -14,6 +15,8 @@ mainModule.run(function($rootScope, $state, $http, $stateParams, $location,$time
           	$('#about').addClass('active')
           }else if(toStateUrl ==='/home'){
           	$('#home').addClass('active')
+          }else if(toStateUrl ==='/experience'){
+          	$('#experience').addClass('active')
           }
 		});
 	});
@@ -26,6 +29,9 @@ mainModule.config(['$stateProvider','$urlRouterProvider',function($stateProvider
 	}).state('about-me',{
 		url : '/about-me',               //关于我
 		templateUrl : '/about-me'
+	}).state('experience',{
+		url : '/experience',               //经验
+		templateUrl : '/experience'
 	});
 	$urlRouterProvider.otherwise('/home');   //默认home
 }]);

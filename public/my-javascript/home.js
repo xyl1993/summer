@@ -16,6 +16,7 @@ mainModule.controller('homeCtrl', ['$scope', function(){
 
 }]);
 
+//下方图片添加动画
 mainModule.directive('imgHover', function(){
 	// Runs during compile
 	return {
