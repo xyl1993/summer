@@ -17,6 +17,8 @@ mainModule.run(function($rootScope, $state, $http, $stateParams, $location,$time
           	$('#home').addClass('active')
           }else if(toStateUrl ==='/experience'){
           	$('#experience').addClass('active')
+          }else if(toStateUrl ==='/skills'){
+          	$('#skills').addClass('active')
           }
 		});
 	});
@@ -32,6 +34,9 @@ mainModule.config(['$stateProvider','$urlRouterProvider',function($stateProvider
 	}).state('experience',{
 		url : '/experience',               //经验
 		templateUrl : '/experience'
+	}).state('skills',{
+		url : '/skills',               //技能
+		templateUrl : '/skills'
 	});
 	$urlRouterProvider.otherwise('/home');   //默认home
 }]);

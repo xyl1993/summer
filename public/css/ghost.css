@@ -1,0 +1,8 @@
+.metismenu{ list-style: outside none none;margin: 0;padding: 0;}
+.metismenu li,a{display: block;}
+.metismenu li{ cursor: pointer;position: relative;text-decoration: none;}
+.metismenu li.active{background-color: #e2e2e2;}
+.metismenu li.active a{text-decoration: none;}
+.metismenu a{    border-top: 1px solid rgba(0, 0, 0, 0.3);box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset;color: #aaa;padding: 10px 20px;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);}
+
+.edit-about-input{    height: 30px;top: -3px;position: relative;}

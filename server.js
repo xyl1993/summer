@@ -5,6 +5,7 @@ var app     = express();
 var path    = require('path');
 var eps     = require('ejs');
 var routes = require('./routes/index');
+var users = require('./routes/users');
 app.engine('html', require('ejs').renderFile);
 
 
@@ -12,10 +13,14 @@ app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+var mysql = require('mysql');
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(express.static(path.join(__dirname, 'ghost')));
 
 app.use('/', routes);
+app.use('/users', users);
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';

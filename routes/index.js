@@ -21,6 +21,10 @@ router.get('/experience', function(req, res, next) {
   res.render('experience.html')
 });
 
+router.get('/skills', function(req, res, next) {
+  res.render('skills.html')
+});
+
 // router.get('/', function (req, res) {
 //   if (db) {
 //     var col = db.collection('counts');
@@ -47,6 +51,11 @@ router.get('/pagecount', function (req, res) {
 router.get('/about-me',function(req,res,next){
 	res.render('/about-me');
 });
+
+// router.post('/about',function(req,res,next){
+//   console.log('aasss');
+//   aboutDao.queryAll(req, res, next);
+// });
 
 /*路由配置end*/
 
