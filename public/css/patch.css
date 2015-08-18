@@ -4,7 +4,7 @@ body{
 ul{padding-left: 0;}
 ul li{list-style: none;}
 .my-navbar{font-family: Brush Script Std;color: rgba(0,0,0,.8);font-size: 27px;font-weight: bold;}
-
+.pointer{cursor: pointer;}
 @media(min-width: 768px){
 	.navbar-default .my-nav>.active>a{background-color: #f8f8f8;}
     .navbar-default .my-nav>.active>a:hover {background-color: #f8f8f8;}
@@ -135,7 +135,7 @@ li#about:hover .header{background-image:url("../images/page2.png");}
 }
 
 /* experience css */
-.exp-left-dyn{    width: 172px;height: 364px;background: url("../images/expbg.png") center top no-repeat;float: left;margin-right: -172px;padding-top: 32px;text-align: center;}
+.exp-left-dyn{  z-index: 4;position: relative;  width: 172px;height: 364px;background: url("../images/expbg.png") center top no-repeat;float: left;margin-right: -172px;padding-top: 32px;text-align: center;}
 .exp-left-tit{ font-family: Brush Script Std;color: #fff;font-size: 40px;display: block;}
 .exp-menu-dyn{margin-top: 37px;}
 .exp-menu-dyn div{margin-bottom: 5px;}
@@ -143,7 +143,7 @@ li#about:hover .header{background-image:url("../images/page2.png");}
 .exp-menu-dyn a:hover {text-decoration: none;cursor: pointer;}
 .exp-menu-dyn a.active{background-color: #3C3C3C;}
 
-.exp-content-dyn{float: left;padding-left: 225px;width: 100%;padding-top: 56px;}
+.exp-content-dyn{z-index: 3;position: relative; float: left;padding-left: 225px;width: 100%;padding-top: 56px;}
 .exp-main-box{padding-left: 30px;width: 100%;background-color: #6D6D6D;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
 .exp-content-box{padding-top: 21px;}
 .exp-content-box:last-of-type{padding-bottom: 40px;}
